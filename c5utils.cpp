@@ -1,5 +1,4 @@
 #include "c5utils.h"
-#include "c5config.h"
 #include <QFile>
 #include <QDateTime>
 
@@ -16,7 +15,7 @@ C5Utils::C5Utils()
 
 void C5Utils::writeErrorLog(const QString &text)
 {
-    QFile f(__c5config.fAppLogFile);
+    QFile f("log.log");
     if (f.open(QIODevice::Append)) {
         f.write(QDateTime::currentDateTime().toString(FORMAT_DATETIME_TO_STR).toUtf8());
         f.write(" ");

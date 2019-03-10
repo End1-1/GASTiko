@@ -13,7 +13,15 @@ class DateDialog : public QDialog
 
 public:
     explicit DateDialog(QWidget *parent = 0);
+
     ~DateDialog();
+
+    static bool getDates(QDate &d1, QDate &d2);
+
+private slots:
+    void on_btnCancel_clicked();
+
+    void on_btnAccept_clicked();
 
 private:
     Ui::DateDialog *ui;

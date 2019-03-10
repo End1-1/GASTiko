@@ -13,7 +13,15 @@ class ConfigDialog : public QDialog
 
 public:
     explicit ConfigDialog(QWidget *parent = 0);
+
     ~ConfigDialog();
+
+    static void openDialog();
+
+private slots:
+    void on_btnCancel_clicked();
+
+    void on_btnSave_clicked();
 
 private:
     Ui::ConfigDialog *ui;

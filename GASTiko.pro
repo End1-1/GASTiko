@@ -4,9 +4,11 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui sql printsupport network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+
+RC_FILE = res.rc
 
 TARGET = GASTiko
 TEMPLATE = app
@@ -25,10 +27,41 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        maindialog.cpp
+        maindialog.cpp \
+    database.cpp \
+    working.cpp \
+    config.cpp \
+    c5tablewidget.cpp \
+    c5lineedit.cpp \
+    c5checkbox.cpp \
+    c5combobox.cpp \
+    c5dateedit.cpp \
+    c5utils.cpp \
+    excel.cpp \
+    datedialog.cpp \
+    configdialog.cpp
 
 HEADERS += \
-        maindialog.h
+        maindialog.h \
+    database.h \
+    working.h \
+    config.h \
+    c5tablewidget.h \
+    c5lineedit.h \
+    c5checkbox.h \
+    c5combobox.h \
+    c5dateedit.h \
+    c5utils.h \
+    excel.h \
+    datedialog.h \
+    rc.h \
+    configdialog.h
 
 FORMS += \
-        maindialog.ui
+        maindialog.ui \
+    working.ui \
+    datedialog.ui \
+    configdialog.ui
+
+RESOURCES += \
+    res.qrc

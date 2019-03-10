@@ -20,10 +20,6 @@ public:
 
     void setIndexForValue(const QVariant &value);
 
-    void setDBValues(const QStringList dbParams, const QString &sql, const QVariant &defaultValue = QVariant());
-
-    void setCache(const QStringList &dbParams, int cacheid, int colId = 0, int colName = 1);
-
 private:
     int fTag;
 

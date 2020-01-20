@@ -2,10 +2,6 @@
 #include <QFile>
 #include <QDateTime>
 
-#ifdef WIN32
-#include <windows.h>
-#endif
-
 C5Utils __c5utils;
 
 C5Utils::C5Utils()
@@ -33,12 +29,9 @@ QString password(const QString &value)
 
 QString hostusername()
 {
-#ifdef WIN32
-    wchar_t userName[100];
-    DWORD userNameSize = sizeof(userName);
-    memset(&userName[0], 0, userNameSize);
-    GetUserName(userName, &userNameSize);
-    return QString::fromWCharArray(userName);
-#endif
-    return "Unknown";
+    QString username = getenv("USER");
+    if (username.isEmpty()) {
+        username = getenv("USERNAME");
+    }
+    return username;
 }

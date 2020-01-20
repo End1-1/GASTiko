@@ -7,17 +7,37 @@
     <x>0</x>
     <y>0</y>
     <width>456</width>
-    <height>237</height>
+    <height>263</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Enter card</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="4" column="0">
-    <widget class="QLabel" name="label_5">
+   <item row="5" column="1">
+    <widget class="QLineEdit" name="leBonus">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="label_4">
      <property name="text">
-      <string>Current bonus</string>
+      <string>Bonuses</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QLineEdit" name="leAmount"/>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLineEdit" name="leCard"/>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Name</string>
      </property>
     </widget>
    </item>
@@ -28,27 +48,7 @@
      </property>
     </widget>
    </item>
-   <item row="0" column="0" colspan="2">
-    <widget class="QLabel" name="lbCaption">
-     <property name="font">
-      <font>
-       <pointsize>12</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color:red;</string>
-     </property>
-     <property name="text">
-      <string>NEW CARD</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-   </item>
-   <item row="7" column="0" colspan="2">
+   <item row="9" column="0" colspan="2">
     <widget class="QWidget" name="widget" native="true">
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
@@ -100,19 +100,6 @@
      </layout>
     </widget>
    </item>
-   <item row="2" column="1">
-    <widget class="QLineEdit" name="leName"/>
-   </item>
-   <item row="1" column="1">
-    <widget class="QLineEdit" name="leCard"/>
-   </item>
-   <item row="2" column="0">
-    <widget class="QLabel" name="label_2">
-     <property name="text">
-      <string>Name</string>
-     </property>
-    </widget>
-   </item>
    <item row="1" column="0">
     <widget class="QLabel" name="label">
      <property name="text">
@@ -120,22 +107,15 @@
      </property>
     </widget>
    </item>
-   <item row="3" column="1">
-    <widget class="QLineEdit" name="leAmount"/>
-   </item>
-   <item row="5" column="1">
-    <widget class="QLineEdit" name="leBonus">
-     <property name="enabled">
-      <bool>false</bool>
-     </property>
-    </widget>
-   </item>
-   <item row="5" column="0">
-    <widget class="QLabel" name="label_4">
+   <item row="6" column="1">
+    <widget class="QCheckBox" name="chUseBonus">
      <property name="text">
-      <string>Bonuses</string>
+      <string>Use bonus</string>
      </property>
     </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QLineEdit" name="leName"/>
    </item>
    <item row="3" column="0">
     <widget class="QLabel" name="label_3">
@@ -144,10 +124,44 @@
      </property>
     </widget>
    </item>
-   <item row="6" column="1">
-    <widget class="QCheckBox" name="chUseBonus">
+   <item row="4" column="0">
+    <widget class="QLabel" name="label_5">
      <property name="text">
-      <string>Use bonus</string>
+      <string>Current bonus</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="2">
+    <widget class="QLabel" name="lbCaption">
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:red;</string>
+     </property>
+     <property name="text">
+      <string>NEW CARD</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="0">
+    <widget class="QLabel" name="lbAmountToPay">
+     <property name="text">
+      <string>Amount to pay</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="1">
+    <widget class="QLineEdit" name="leAmoutToPay">
+     <property name="enabled">
+      <bool>false</bool>
      </property>
     </widget>
    </item>

@@ -10,8 +10,13 @@ Database::Database()
 {
     fConnectionName = "db" + QString::number(fCounter++);
     fDatabase = QSqlDatabase::addDatabase("QIBASE", fConnectionName);
+#ifdef QT_DEBUG
+    fDatabase.setHostName("127.0.0.1");
+    fDatabase.setDatabaseName("C:\\Projects\\GASTiko\\db.fdb");
+#else
     fDatabase.setHostName("127.0.0.1");
     fDatabase.setDatabaseName(qApp->applicationDirPath() + "\\db.fdb");
+#endif
     fDatabase.setUserName("SYSDBA");
     fDatabase.setPassword("masterkey");
     fDatabase.setConnectOptions("lc_ctype=utf8");

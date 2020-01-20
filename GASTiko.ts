@@ -175,7 +175,7 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="database.cpp" line="19"/>
+        <location filename="database.cpp" line="24"/>
         <source>Database error</source>
         <translation></translation>
     </message>
@@ -188,9 +188,14 @@
         <translation>Քարտ</translation>
     </message>
     <message>
-        <location filename="working.ui" line="44"/>
+        <location filename="working.ui" line="147"/>
         <source>NEW CARD</source>
         <translation>ՆՈՐ ՔԱՐՏ</translation>
+    </message>
+    <message>
+        <location filename="working.ui" line="157"/>
+        <source>Amount to pay</source>
+        <translation>Վճարման ենթակա</translation>
     </message>
     <message>
         <location filename="working.ui" line="73"/>
@@ -203,58 +208,59 @@
         <translation>Հրաժարվել</translation>
     </message>
     <message>
-        <location filename="working.ui" line="112"/>
+        <location filename="working.ui" line="40"/>
         <source>Name</source>
         <translation>Հաճախորդ</translation>
     </message>
     <message>
-        <location filename="working.ui" line="119"/>
+        <location filename="working.ui" line="106"/>
         <source>Card</source>
         <translation>Քարտ</translation>
     </message>
     <message>
-        <location filename="working.ui" line="136"/>
+        <location filename="working.ui" line="27"/>
         <source>Bonuses</source>
         <translation>Կատակված բոնուս</translation>
     </message>
     <message>
-        <location filename="working.ui" line="143"/>
+        <location filename="working.ui" line="123"/>
         <source>Current amount</source>
         <translation>Գումար</translation>
     </message>
     <message>
-        <location filename="working.ui" line="150"/>
+        <location filename="working.ui" line="113"/>
         <source>Use bonus</source>
         <translation>Օգտագործել բոնուսը</translation>
     </message>
     <message>
-        <location filename="working.ui" line="20"/>
+        <location filename="working.ui" line="130"/>
         <source>Current bonus</source>
         <translation>Ընդացիկ բոնուս</translation>
     </message>
     <message>
-        <location filename="working.cpp" line="40"/>
-        <location filename="working.cpp" line="47"/>
+        <location filename="working.cpp" line="41"/>
+        <location filename="working.cpp" line="48"/>
         <source>Error</source>
         <translation>Սխալ</translation>
     </message>
     <message>
-        <location filename="working.cpp" line="40"/>
+        <location filename="working.cpp" line="41"/>
         <source>The card cannot be empty</source>
         <translation>Քարտի կոդը դատարկ է</translation>
     </message>
     <message>
-        <location filename="working.cpp" line="47"/>
+        <location filename="working.cpp" line="48"/>
         <source>The name cannot be empty</source>
         <translation>Անունը չի կարող դատարկ լինի</translation>
     </message>
     <message>
-        <location filename="working.cpp" line="51"/>
-        <location filename="working.cpp" line="57"/>
-        <location filename="working.cpp" line="62"/>
-        <location filename="working.cpp" line="79"/>
-        <location filename="working.cpp" line="98"/>
-        <location filename="working.cpp" line="103"/>
+        <location filename="working.cpp" line="52"/>
+        <location filename="working.cpp" line="58"/>
+        <location filename="working.cpp" line="63"/>
+        <location filename="working.cpp" line="74"/>
+        <location filename="working.cpp" line="90"/>
+        <location filename="working.cpp" line="111"/>
+        <location filename="working.cpp" line="116"/>
         <source>Database error</source>
         <translation></translation>
     </message>

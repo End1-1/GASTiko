@@ -29,10 +29,14 @@ private slots:
 
     void on_leAmount_textChanged(const QString &arg1);
 
+    void on_chUseBonus_clicked(bool checked);
+
 private:
     Ui::Working *ui;
 
     MainDialog *fMainDialog;
+
+    void setFinalPayment();
 };
 
 #endif // WORKING_H

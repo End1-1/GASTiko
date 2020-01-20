@@ -13,6 +13,7 @@ Working::Working(QWidget *parent) :
     ui->setupUi(this);
     ui->leName->setEnabled(false);
     ui->lbCaption->setVisible(false);
+    on_chUseBonus_clicked(false);
 
 }
 
@@ -63,13 +64,7 @@ void Working::on_btnWrite_clicked()
         return;
     }
     double bonus = ui->leCurrentBonus->text().toDouble();
-    if (ui->chUseBonus->isChecked()) {
-        bonus = ui->leBonus->text().toDouble();
-        if (bonus > ui->leAmount->text().toDouble()) {
-            bonus = ui->leAmount->text().toDouble();
-        }
-        bonus *= -1;
-    }
+
     db[":fcard"] = ui->leCard->text();
     db[":fdate"] = QDate::currentDate();
     db[":famount"] = ui->leAmount->text().toDouble();
@@ -80,6 +75,25 @@ void Working::on_btnWrite_clicked()
         return;
     }
     fMainDialog->addLastRow(db);
+
+    if (ui->chUseBonus->isChecked()) {
+        on_leCard_returnPressed();
+        bonus = ui->leBonus->text().toDouble();
+        if (bonus > ui->leAmount->text().toDouble()) {
+            bonus = ui->leAmount->text().toDouble();
+        }
+        db[":fcard"] = ui->leCard->text();
+        db[":fdate"] = QDate::currentDate();
+        db[":famount"] = 0;
+        db[":fscale"] = 0;
+        db[":fbonus"] = bonus * -1;
+        if (!db.exec()) {
+            QMessageBox::critical(this, tr("Database error"), db.fLastError);
+            return;
+        }
+        fMainDialog->addLastRow(db);
+    }
+
     ui->lbCaption->setVisible(false);
     ui->leName->setEnabled(false);
     ui->leName->clear();
@@ -122,4 +136,22 @@ void Working::on_leCard_returnPressed()
 void Working::on_leAmount_textChanged(const QString &arg1)
 {
     ui->leCurrentBonus->setText(QString::number(arg1.toDouble() * Config::scaleFactor(), 'f', 2));
+    setFinalPayment();
+}
+
+void Working::on_chUseBonus_clicked(bool checked)
+{
+    ui->leAmoutToPay->setVisible(checked);
+    ui->lbAmountToPay->setVisible(checked);
+    setFinalPayment();
+}
+
+void Working::setFinalPayment()
+{
+    if (ui->chUseBonus->isChecked()) {
+        ui->leAmoutToPay->setText(QString::number(ui->leAmount->text().toDouble() - ui->leCurrentBonus->text().toDouble() - ui->leBonus->text().toDouble(), 'f', 2));
+        if (ui->leAmoutToPay->text().toDouble() < 0) {
+            ui->leAmoutToPay->setText("0");
+        }
+    }
 }

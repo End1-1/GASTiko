@@ -58,6 +58,66 @@
     </message>
 </context>
 <context>
+    <name>DiscountCard</name>
+    <message>
+        <location filename="discountcard.ui" line="14"/>
+        <source>Discount card</source>
+        <translation>Ջեղչի քարտ</translation>
+    </message>
+    <message>
+        <location filename="discountcard.ui" line="39"/>
+        <source>Write</source>
+        <translation>Գրանցել</translation>
+    </message>
+    <message>
+        <location filename="discountcard.ui" line="49"/>
+        <source>Cancel</source>
+        <translation>Հրաժարվել</translation>
+    </message>
+    <message>
+        <location filename="discountcard.ui" line="78"/>
+        <source>Card</source>
+        <translation>Քարտ</translation>
+    </message>
+    <message>
+        <location filename="discountcard.ui" line="85"/>
+        <source>Name</source>
+        <translation>Հաճախորդ</translation>
+    </message>
+    <message>
+        <location filename="discountcard.ui" line="109"/>
+        <source>NEW DISCOUNT CARD</source>
+        <translation>ՆՈՐ ԶՈՂՋԻ ՔԱՐՏ</translation>
+    </message>
+    <message>
+        <location filename="discountcard.ui" line="122"/>
+        <source>Discount</source>
+        <translation>Ջեղչ</translation>
+    </message>
+    <message>
+        <location filename="discountcard.ui" line="129"/>
+        <source>Phone</source>
+        <translation>Հեռախոս</translation>
+    </message>
+    <message>
+        <location filename="discountcard.cpp" line="40"/>
+        <source>Error</source>
+        <translation>Սխալ</translation>
+    </message>
+    <message>
+        <location filename="discountcard.cpp" line="40"/>
+        <source>The name cannot be empty</source>
+        <translation>Անունը չի կարող դատարկ լինի</translation>
+    </message>
+    <message>
+        <location filename="discountcard.cpp" line="45"/>
+        <location filename="discountcard.cpp" line="50"/>
+        <location filename="discountcard.cpp" line="59"/>
+        <source>Database error</source>
+        <translation></translation>
+    </message>
+</context>
+<context>
     <name>MainDialog</name>
     <message>
         <location filename="maindialog.ui" line="14"/>
@@ -80,102 +140,144 @@
         <translation>Հաշվետվություն</translation>
     </message>
     <message>
-        <location filename="maindialog.ui" line="125"/>
+        <location filename="maindialog.ui" line="112"/>
+        <source>Discount cards</source>
+        <translation>Ջեղչի քարտեր</translation>
+    </message>
+    <message>
+        <location filename="maindialog.ui" line="145"/>
         <source>Options</source>
         <translation>Կարգավորումներ</translation>
     </message>
     <message>
-        <location filename="maindialog.cpp" line="30"/>
-        <location filename="maindialog.cpp" line="34"/>
-        <location filename="maindialog.cpp" line="42"/>
-        <location filename="maindialog.cpp" line="47"/>
-        <location filename="maindialog.cpp" line="80"/>
-        <location filename="maindialog.cpp" line="85"/>
-        <location filename="maindialog.cpp" line="106"/>
-        <location filename="maindialog.cpp" line="111"/>
-        <location filename="maindialog.cpp" line="115"/>
-        <location filename="maindialog.cpp" line="120"/>
-        <location filename="maindialog.cpp" line="155"/>
-        <location filename="maindialog.cpp" line="159"/>
-        <location filename="maindialog.cpp" line="191"/>
-        <location filename="maindialog.cpp" line="197"/>
+        <location filename="maindialog.cpp" line="31"/>
+        <location filename="maindialog.cpp" line="35"/>
+        <location filename="maindialog.cpp" line="43"/>
+        <location filename="maindialog.cpp" line="48"/>
+        <location filename="maindialog.cpp" line="81"/>
+        <location filename="maindialog.cpp" line="86"/>
+        <location filename="maindialog.cpp" line="107"/>
+        <location filename="maindialog.cpp" line="112"/>
+        <location filename="maindialog.cpp" line="116"/>
+        <location filename="maindialog.cpp" line="121"/>
+        <location filename="maindialog.cpp" line="192"/>
+        <location filename="maindialog.cpp" line="196"/>
+        <location filename="maindialog.cpp" line="229"/>
+        <location filename="maindialog.cpp" line="235"/>
+        <location filename="maindialog.cpp" line="324"/>
+        <location filename="maindialog.cpp" line="328"/>
         <source>Database error</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="maindialog.cpp" line="75"/>
-        <location filename="maindialog.cpp" line="101"/>
+        <location filename="maindialog.cpp" line="76"/>
+        <location filename="maindialog.cpp" line="102"/>
         <source>Question</source>
         <translation>Հարց</translation>
     </message>
     <message>
-        <location filename="maindialog.cpp" line="75"/>
-        <location filename="maindialog.cpp" line="101"/>
+        <location filename="maindialog.cpp" line="76"/>
+        <location filename="maindialog.cpp" line="102"/>
         <source>Confirm to remove</source>
         <translation>Հաստատեք հեռացումը</translation>
     </message>
     <message>
-        <location filename="maindialog.cpp" line="92"/>
-        <location filename="maindialog.cpp" line="127"/>
+        <location filename="maindialog.cpp" line="93"/>
+        <location filename="maindialog.cpp" line="128"/>
         <source>Info</source>
         <translation>Տեղեկություն</translation>
     </message>
     <message>
-        <location filename="maindialog.cpp" line="92"/>
-        <location filename="maindialog.cpp" line="127"/>
+        <location filename="maindialog.cpp" line="93"/>
+        <location filename="maindialog.cpp" line="128"/>
         <source>Deleted</source>
         <translation>Հեռացված է</translation>
     </message>
     <message>
-        <location filename="maindialog.cpp" line="142"/>
+        <location filename="maindialog.cpp" line="157"/>
+        <source>Confirmation</source>
+        <translation>Հաստատում</translation>
+    </message>
+    <message>
+        <location filename="maindialog.cpp" line="157"/>
+        <source>Confirm to remove card</source>
+        <translation>Հաստատեք քարտի հեռացումը</translation>
+    </message>
+    <message>
+        <location filename="maindialog.cpp" line="179"/>
         <source>Card</source>
         <translation>Քարտ</translation>
     </message>
     <message>
-        <location filename="maindialog.cpp" line="143"/>
-        <location filename="maindialog.cpp" line="183"/>
+        <location filename="maindialog.cpp" line="180"/>
+        <location filename="maindialog.cpp" line="220"/>
+        <location filename="maindialog.cpp" line="316"/>
         <source>Date</source>
         <translation>Ամսաթիվ</translation>
     </message>
     <message>
-        <location filename="maindialog.cpp" line="144"/>
-        <location filename="maindialog.cpp" line="184"/>
+        <location filename="maindialog.cpp" line="181"/>
+        <location filename="maindialog.cpp" line="221"/>
+        <location filename="maindialog.cpp" line="317"/>
         <source>Costumer</source>
         <translation>Հաճախորդ</translation>
     </message>
     <message>
-        <location filename="maindialog.cpp" line="145"/>
+        <location filename="maindialog.cpp" line="182"/>
         <source>Count</source>
         <translation>Քանակ</translation>
     </message>
     <message>
-        <location filename="maindialog.cpp" line="146"/>
-        <location filename="maindialog.cpp" line="185"/>
+        <location filename="maindialog.cpp" line="183"/>
+        <location filename="maindialog.cpp" line="223"/>
         <source>Amount</source>
         <translation>Գումար</translation>
     </message>
     <message>
-        <location filename="maindialog.cpp" line="147"/>
-        <location filename="maindialog.cpp" line="186"/>
+        <location filename="maindialog.cpp" line="184"/>
+        <location filename="maindialog.cpp" line="224"/>
         <source>Bonus</source>
         <translation>Բոնուս</translation>
     </message>
     <message>
-        <location filename="maindialog.cpp" line="182"/>
+        <location filename="maindialog.cpp" line="219"/>
+        <location filename="maindialog.cpp" line="315"/>
         <source>ID</source>
         <translation>ՀԱՄԱՐ</translation>
     </message>
     <message>
-        <location filename="maindialog.cpp" line="254"/>
-        <location filename="maindialog.cpp" line="257"/>
+        <location filename="maindialog.cpp" line="222"/>
+        <location filename="maindialog.cpp" line="318"/>
+        <source>Phone</source>
+        <translation>Հեռախոս</translation>
+    </message>
+    <message>
+        <location filename="maindialog.cpp" line="293"/>
+        <location filename="maindialog.cpp" line="296"/>
+        <location filename="maindialog.cpp" line="301"/>
         <source>Delete</source>
         <translation>Հեռացնել</translation>
+    </message>
+    <message>
+        <location filename="maindialog.cpp" line="299"/>
+        <source>New</source>
+        <translation>Նոր</translation>
+    </message>
+    <message>
+        <location filename="maindialog.cpp" line="300"/>
+        <source>Edit</source>
+        <translation>Խմբագրել</translation>
+    </message>
+    <message>
+        <location filename="maindialog.cpp" line="319"/>
+        <source>Discount</source>
+        <translation>Ջեղչ</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="database.cpp" line="24"/>
+        <location filename="database.cpp" line="25"/>
         <source>Database error</source>
         <translation></translation>
     </message>
@@ -188,52 +290,57 @@
         <translation>Քարտ</translation>
     </message>
     <message>
-        <location filename="working.ui" line="147"/>
+        <location filename="working.ui" line="40"/>
         <source>NEW CARD</source>
         <translation>ՆՈՐ ՔԱՐՏ</translation>
     </message>
     <message>
-        <location filename="working.ui" line="157"/>
+        <location filename="working.ui" line="154"/>
         <source>Amount to pay</source>
         <translation>Վճարման ենթակա</translation>
     </message>
     <message>
-        <location filename="working.ui" line="73"/>
+        <location filename="working.ui" line="171"/>
+        <source>Phone</source>
+        <translation>Հեռախոս</translation>
+    </message>
+    <message>
+        <location filename="working.ui" line="107"/>
         <source>Write</source>
         <translation>Գրանցել</translation>
     </message>
     <message>
-        <location filename="working.ui" line="83"/>
+        <location filename="working.ui" line="117"/>
         <source>Cancel</source>
         <translation>Հրաժարվել</translation>
     </message>
     <message>
-        <location filename="working.ui" line="40"/>
+        <location filename="working.ui" line="74"/>
         <source>Name</source>
         <translation>Հաճախորդ</translation>
     </message>
     <message>
-        <location filename="working.ui" line="106"/>
+        <location filename="working.ui" line="53"/>
         <source>Card</source>
         <translation>Քարտ</translation>
     </message>
     <message>
-        <location filename="working.ui" line="27"/>
+        <location filename="working.ui" line="161"/>
         <source>Bonuses</source>
         <translation>Կատակված բոնուս</translation>
     </message>
     <message>
-        <location filename="working.ui" line="123"/>
+        <location filename="working.ui" line="81"/>
         <source>Current amount</source>
         <translation>Գումար</translation>
     </message>
     <message>
-        <location filename="working.ui" line="113"/>
+        <location filename="working.ui" line="67"/>
         <source>Use bonus</source>
         <translation>Օգտագործել բոնուսը</translation>
     </message>
     <message>
-        <location filename="working.ui" line="130"/>
+        <location filename="working.ui" line="60"/>
         <source>Current bonus</source>
         <translation>Ընդացիկ բոնուս</translation>
     </message>
@@ -255,12 +362,13 @@
     </message>
     <message>
         <location filename="working.cpp" line="52"/>
-        <location filename="working.cpp" line="58"/>
-        <location filename="working.cpp" line="63"/>
-        <location filename="working.cpp" line="74"/>
-        <location filename="working.cpp" line="90"/>
-        <location filename="working.cpp" line="111"/>
-        <location filename="working.cpp" line="116"/>
+        <location filename="working.cpp" line="59"/>
+        <location filename="working.cpp" line="64"/>
+        <location filename="working.cpp" line="75"/>
+        <location filename="working.cpp" line="87"/>
+        <location filename="working.cpp" line="96"/>
+        <location filename="working.cpp" line="117"/>
+        <location filename="working.cpp" line="122"/>
         <source>Database error</source>
         <translation></translation>
     </message>

@@ -8,7 +8,7 @@ namespace Ui {
 class MainDialog;
 }
 
-enum ReportMode {rmWorking = 0, rmCards};
+enum ReportMode {rmWorking = 0, rmCards, rmDiscountCards};
 
 class MainDialog : public QDialog
 {
@@ -28,6 +28,12 @@ private slots:
 
     void deleteCardRow();
 
+    void newDiscountCard();
+
+    void editDiscountCard();
+
+    void deleteDiscountCard();
+
     void on_btnWorking_clicked();
 
     void on_btnCards_clicked();
@@ -37,6 +43,8 @@ private slots:
     void on_btnConfig_clicked();
 
     void on_tbl_customContextMenuRequested(const QPoint &pos);
+
+    void on_btnDiscountCards_clicked();
 
 private:
     Ui::MainDialog *ui;

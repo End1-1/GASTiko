@@ -12,7 +12,7 @@ Config::Config()
 
 bool Config::go()
 {
-    return true; //fSettings.value("var").toString() == "macunabrdosh";
+    return fSettings.value("var").toString() == "macunabrdosh";
 }
 
 QString Config::slogan()

@@ -3,6 +3,7 @@
 #include <QSqlError>
 #include <QApplication>
 #include <QObject>
+#include <QDebug>
 
 int Database::fCounter = 0;
 
@@ -29,6 +30,9 @@ Database::Database()
 
 Database::~Database()
 {
+    if (fDatabase.isOpen()) {
+        fDatabase.commit();
+    }
     fDatabase = QSqlDatabase::addDatabase("QIBASE");
     QSqlDatabase::removeDatabase(fConnectionName);
 }
@@ -56,6 +60,9 @@ bool Database::exec()
     if (!result) {
         fLastError = fQuery.lastError().databaseText();
     }
+#ifdef QT_DEBUG
+    qDebug() << lastQuery(&fQuery);
+#endif
     return result;
 }
 
@@ -82,4 +89,38 @@ QDate Database::getDate(int column)
 QString Database::getString(int column)
 {
     return fQuery.value(column).toString();
+}
+
+const QString Database::lastQuery(QSqlQuery *q) const
+{
+    QString sql = q->lastQuery();
+    QMapIterator<QString, QVariant> it(q->boundValues());
+    while (it.hasNext()) {
+        it.next();
+        QVariant value = it.value();
+        switch (it.value().type()) {
+        case QVariant::String:
+            value = QString("'%1'").arg(value.toString().replace("'", "''"));
+            break;
+        case QVariant::Date:
+            value = QString("'%1'").arg(value.toDate().toString("yyyy-MM-dd"));
+            break;
+        case QVariant::DateTime:
+            value = QString("'%1'").arg(value.toDateTime().toString("yyyy-MM-dd HH:mm:ss"));
+            break;
+        case QVariant::Double:
+            value = QString("%1").arg(value.toDouble());
+            break;
+        case QVariant::Int:
+            value = QString("%1").arg(value.toInt());
+            break;
+        case QVariant::Time:
+            value = QString("'%1'").arg(value.toTime().toString("HH:mm:ss"));
+            break;
+        default:
+            break;
+        }
+        sql.replace(QRegExp(it.key() + "\\b"), value.toString());
+    }
+    return sql;
 }

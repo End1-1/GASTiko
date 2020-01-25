@@ -26,6 +26,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
+    discountcard.cpp \
         main.cpp \
         maindialog.cpp \
     database.cpp \
@@ -42,6 +43,7 @@ SOURCES += \
     configdialog.cpp
 
 HEADERS += \
+    discountcard.h \
         maindialog.h \
     database.h \
     working.h \
@@ -58,6 +60,7 @@ HEADERS += \
     configdialog.h
 
 FORMS += \
+    discountcard.ui \
         maindialog.ui \
     working.ui \
     datedialog.ui \

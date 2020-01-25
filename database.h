@@ -33,6 +33,8 @@ public:
 
     QString fLastError;
 
+    const QString lastQuery(QSqlQuery *q) const;
+
 private:
     QSqlDatabase fDatabase;
 

@@ -48,12 +48,13 @@ void Working::on_btnWrite_clicked()
             QMessageBox::critical(this, tr("Error"), tr("The name cannot be empty"));
             return;
         }
-        if (!db.prepare("insert into cards values (:fid, :fcostumer, current_date)")) {
+        if (!db.prepare("insert into cards (fid, fcostumer, fphone, fissue) values (:fid, :fcostumer, :fphone, current_date)")) {
             QMessageBox::critical(this, tr("Database error"), db.fLastError);
             return;
         }
         db[":fid"] = ui->leCard->text();
         db[":fcostumer"] = ui->leName->text();
+        db[":fphone"] = ui->lePhone->text();
         if (!db.exec()) {
             QMessageBox::critical(this, tr("Database error"), db.fLastError);
             return;
@@ -82,6 +83,10 @@ void Working::on_btnWrite_clicked()
         if (bonus > ui->leAmount->text().toDouble()) {
             bonus = ui->leAmount->text().toDouble();
         }
+        if (!db.prepare("insert into history values (null, :fcard, :fdate, :famount, :fscale, :fbonus)")) {
+            QMessageBox::critical(this, tr("Database error"), db.fLastError);
+            return;
+        }
         db[":fcard"] = ui->leCard->text();
         db[":fdate"] = QDate::currentDate();
         db[":famount"] = 0;
@@ -99,6 +104,7 @@ void Working::on_btnWrite_clicked()
     ui->leName->clear();
     ui->leAmount->clear();
     ui->leBonus->clear();
+    ui->lePhone->clear();
     ui->leCurrentBonus->clear();
     ui->leCard->clear();
     ui->leCard->setFocus();
@@ -108,7 +114,7 @@ void Working::on_leCard_returnPressed()
 {
     ui->leCard->setText(ui->leCard->text().replace(";", "").replace("?", ""));
     Database db;
-    if (!db.prepare("select fcostumer from cards where fid=:fid")) {
+    if (!db.prepare("select fcostumer, fphone from cards where fid=:fid")) {
         QMessageBox::critical(this, tr("Database error"), db.fLastError);
         return;
     }
@@ -119,7 +125,9 @@ void Working::on_leCard_returnPressed()
     }
     if (db.next()) {
         ui->leName->setText(db.getString(0));
+        ui->lePhone->setText(db.getString(1));
         ui->leName->setEnabled(false);
+        ui->lePhone->setEnabled(false);
         ui->leAmount->setFocus();
         db.prepare("select sum(fbonus) from history where fcard=:fcard");
         db[":fcard"] = ui->leCard->text();
